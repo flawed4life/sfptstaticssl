@@ -8,7 +8,7 @@ MAINTAINER Adrian Dvergsdal [atmoz.net]
 RUN apt-get update && \
     apt-get -y install openssh-server && \
     rm -rf /var/lib/apt/lists/* && \
-    mkdir -p /var/run/sshd && \
+    mkdir -p /var/run/sshd
 
 COPY files/sshd_config /etc/ssh/sshd_config
 COPY files/create-sftp-user /usr/local/bin/
